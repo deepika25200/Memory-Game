@@ -1,0 +1,5 @@
+<div class="card" [class.flipped]="isFlipped" [class.matched]="isMatched" (click)="handleCardClick()">
+    <div class="card-inner">
+      <img [src]="isFlipped ? card : 'https://dummyimage.com/100x100/000000/000000.png'" alt="Card Image"/>
+    </div>
+  </div>

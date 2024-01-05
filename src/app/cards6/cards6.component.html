@@ -1,0 +1,15 @@
+<div class="card-grid">
+  <app-card *ngFor="let card of cards; let i = index"
+            [ngClass]="{'matched': card.matched}"
+            [card]="card.image"
+            [isFlipped]="flippedCardIndices.includes(i)"
+            [isMatched]="matchedCardIndices.includes(i)"
+            (cardClicked)="handleCardClick(i, card)">
+  </app-card>
+  <p>Moves: {{ moves }}</p>
+  <p>Misses: {{ misses }}</p>
+  <p>Rounds Played: {{ roundsPlayed }}</p>
+  <p>Knowledge Points: {{ knowledgePoints }}</p>
+  <p>Accuracy: {{ accuracy }}%</p>
+</div>
+  
